@@ -13,6 +13,6 @@ public class Controller {
     @GetMapping(value = "/")
     public String helloWorld(){
 
-        return "Hello world" + newParameter ;
+        return "Hello world  " + newParameter ;
     }
 }
