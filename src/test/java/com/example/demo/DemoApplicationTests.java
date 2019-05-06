@@ -9,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -31,7 +33,7 @@ public class DemoApplicationTests {
                     .perform(get("/"))
                     .andDo(print())
                     .andExpect(status().isOk())
-                    .andExpect(content().string("Hello world"));
+                    .andExpect(content().string(containsString("Hello world")));
     }
 
 }
