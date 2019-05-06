@@ -10,7 +10,9 @@ public class Controller {
     @GetMapping(value = "/")
     public String helloWorld(){
 
-        return "Hello world";
+        int b = 5;
+
+        return "Hello world" + b;
     }
 
 }
