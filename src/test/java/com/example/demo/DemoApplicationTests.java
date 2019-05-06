@@ -24,7 +24,7 @@ public class DemoApplicationTests {
 
 
     @Test
-    @WithMockUser(username = "emil", password = "1234")
+    @WithMockUser(username = "emil", password = "1234", roles = "user")
     public void helloWorldTest() throws Exception {
 
             mockMvc
