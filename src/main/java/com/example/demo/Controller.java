@@ -23,8 +23,4 @@ public class Controller {
 //        return hello;
 //    }
 
-        @GetMapping("/new")
-        public Mono<String> helloWorldNwe(){
-            return Mono.just("Nowy hello world!");
-        }
 }

@@ -10,9 +10,19 @@ import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
+import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.reactive.function.server.RouterFunctions.route;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
+
 @SpringBootApplication
 public class DemoApplication {
 
+
+    @Bean
+    RouterFunction<ServerResponse> helloWorldNew() {
+        return route(GET("/hello"),
+                req -> ok().body(Mono.just("hello new"),String.class));
+    }
 
 
     public static void main(String[] args) {
