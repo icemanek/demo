@@ -36,4 +36,14 @@ public class DemoApplicationTests {
                     .andExpect(content().string(containsString("Hello world")));
     }
 
+    @Test
+    public void helloModelTest() throws Exception {
+
+        mockMvc
+                .perform(get("/all"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("wiadomosc")));
+    }
+
 }
