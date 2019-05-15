@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RestController
-public class Controller {
+//@RestController
+//public class Controller {
 
     //    @Value("${param}")
 //    private String startParam;
@@ -53,4 +53,4 @@ public class Controller {
 
 
 
-}
+

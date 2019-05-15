@@ -19,4 +19,10 @@ public class HelloRouter {
                 .route(RequestPredicates.GET("/hello").and(RequestPredicates.accept(MediaType.TEXT_PLAIN)), helloHandler::hello);
     }
 
+    @Bean
+    public RouterFunction<ServerResponse> admin(AdminHandler adminHandler){
+
+        return RouterFunctions
+        .route(RequestPredicates.GET("/admin").and(RequestPredicates.accept(MediaType.TEXT_PLAIN)), adminHandler::helloAdmin);
+    }
 }
