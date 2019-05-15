@@ -18,9 +18,6 @@ public class SecurityConfig {
     public MapReactiveUserDetailsService user() {
 
         UserDetails userDetails = User.withDefaultPasswordEncoder()
-                .username("emil")
-                .password("1234")
-                .roles("user")
                 .username("admin")
                 .password("admin")
                 .roles("admin")
@@ -36,6 +33,7 @@ public class SecurityConfig {
                 .authorizeExchange()
                 .pathMatchers("/").permitAll()
                 .pathMatchers("/admin").hasRole("admin")
+                .pathMatchers("/hello").hasRole("admin")
                 .anyExchange().authenticated()
                 .and()
                 .httpBasic().and()
