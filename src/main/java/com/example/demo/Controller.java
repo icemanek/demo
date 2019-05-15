@@ -15,7 +15,7 @@ import java.util.Map;
 @RestController
 public class Controller {
 
-//    @Value("${param}")
+    //    @Value("${param}")
 //    private String startParam;
 //
 //    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -24,29 +24,33 @@ public class Controller {
 //        Map<String, String> hello = new HashMap<>();
 //
 //        hello.put("message", "Hello World");
-//        hello.put("startParam", startParam);
+////        hello.put("startParam", startParam);
 //
 //
 //        return hello;
 //    }
+//}
+
+
+//    @Value("${param2}")
+//    private String parameter;
 //
 //
+//  private List<HelloModel> helloModels;
+//
+//  public Controller(){
+//
+//      helloModels = new ArrayList<>();
+//      helloModels.add(new HelloModel("wiadomosc",parameter));
+//  }
+//
+//    @GetMapping("/all")
+//    public List<HelloModel> getHello(){
+//
+//        return helloModels;
+//    }
+//}
 
-    @Value("${param2}")
-    private String parameter;
 
 
-  private List<HelloModel> helloModels;
-
-  public Controller(){
-
-      helloModels = new ArrayList<>();
-      helloModels.add(new HelloModel("wiadomosc",parameter));
-  }
-
-    @GetMapping("/all")
-    public List<HelloModel> getHello(){
-
-        return helloModels;
-    }
 }

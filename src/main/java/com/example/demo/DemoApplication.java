@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -20,12 +21,9 @@ public class DemoApplication {
 
 
     public static void main(String[] args) {
-
-        SpringApplication.run(DemoApplication.class, args);
-
-
-//        HelloWebClient gwc = new HelloWebClient();
-//        System.out.println(gwc.getResult());
+        SpringApplication application = new SpringApplication(DemoApplication.class);
+        application.setWebApplicationType(WebApplicationType.REACTIVE);
+        application.run(args);
     }
 
 
