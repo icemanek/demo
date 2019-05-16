@@ -19,7 +19,7 @@ public class HelloHandler {
 
         logger.info("show hello world site");
 
-        
+
         return ServerResponse.ok().contentType(MediaType.TEXT_PLAIN)
                 .body(BodyInserters.fromObject("Hello, Spring!"));
     }
